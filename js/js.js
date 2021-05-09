@@ -149,7 +149,7 @@ btn.onclick = function() {
     document.getElementById("image1").src = "photo/town1.png"
     document.getElementById("image2").src = "photo/town2.png"
     document.getElementById("image3").src = "photo/town3.png"
-    document.getElementById("modaltitle").innerHTML = "Enrollment system"
+    document.getElementById("modaltitle").innerHTML = "2d Mobile Game"
     document.querySelector(".modal-description").innerHTML = "This study aimed the used of mobile games in mathematical education for grade school students. It has been observed that Mobile devices may be used to improve the ability to learn. Thus, the development of Educational application is essential, in particular, in order to improve mathematics - related the skills of the children.Although there are many online applicationsfor this purpose.Nonetheless, there is A simple, interactive and intuitive android - based application is needed Enhancing children skills in basic mathematical concepts.In this work, we develop an educational application, named“ Adventure of Atlas” by using Unity Game Engine and C# programming language, which the users allow to learn basic math"
 
 
