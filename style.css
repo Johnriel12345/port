@@ -1,0 +1,475 @@
+                * {
+                    margin: 0px;
+                    font-family: sans-serif;
+                    scroll-behavior: smooth;
+                }
+                
+                .nav-bars {
+                    font-family: sans-serif;
+                    float: right;
+                    padding-right: 70px;
+                }
+                
+                .nav {
+                    float: right;
+                    font-size: 20px;
+                    color: black;
+                    font-weight: bold;
+                    margin: 20px;
+                    cursor: pointer;
+                }
+                
+                .nav:hover {
+                    text-shadow: 3px 3px 10px black;
+                }
+                
+                .container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .about {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    height: 560px;
+                    position: fixed;
+                    z-index: -1;
+                    background-image: url(photo/about.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100% 100%;
+                }
+                
+                .scrolltop {
+                    position: fixed;
+                    bottom: 40px;
+                    right: 40px;
+                    width: 40px;
+                    height: 40px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    z-index: 100000;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.5s;
+                    animation-name: scrollarrow;
+                    animation-duration: 0.6s;
+                    animation-iteration-count: infinite;
+                }
+                
+                @keyframes scrollarrow {
+                    0% {
+                        top: 500px;
+                    }
+                    75% {
+                        top: 530px;
+                    }
+                    100% {
+                        top: 500px;
+                    }
+                }
+                
+                .scrolltop.active {
+                    bottom: 40px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                
+                .box1 {
+                    height: 300px;
+                    width: 300px;
+                    padding: 20px;
+                }
+                
+                .box2 {
+                    height: 300px;
+                    width: 300px;
+                    padding: 20px;
+                }
+                
+                .nametext {
+                    height: 60px;
+                }
+                
+                #name {
+                    text-align: center;
+                    font-size: 20px;
+                }
+                
+                .projects {
+                    background-color: #000E42;
+                    width: 100%;
+                    height: 600px;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 560px;
+                    flex-wrap: wrap;
+                    padding-top: 100px;
+                    background-image: url(photo/bg.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+                .services {
+                    background-image: url(photo/about.png);
+                    background-repeat: no-repeat;
+                    /*background-color: #EBEBEB;*/
+                    background-size: 100% 100%;
+                    width: 100%;
+                    height: 600px;
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    padding-top: 100px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+                .services-content {
+                    height: 100%;
+                    width: 40%;
+                    margin: 10px;
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                #col1,
+                #col2,
+                #col3 {
+                    opacity: 0;
+                    margin-bottom: 30px;
+                    transition: all 2s ease;
+                }
+                
+                .one,
+                .two {
+                    height: 250px;
+                    width: 300px;
+                    margin: 20px;
+                    border-radius: 10px;
+                    border: 5px solid #EFEFEF;
+                    overflow: hidden;
+                }
+                
+                #mg,
+                #mg1 {
+                    border-radius: 10px;
+                    transition: margin 0.5s, width 0.5s, height 0.5s;
+                    cursor: pointer;
+                }
+                
+                #mg:hover {
+                    width: 450px;
+                    height: 300px;
+                    margin-top: -20px;
+                    margin-left: -20px;
+                }
+                
+                #mg1:hover {
+                    width: 450px;
+                    height: 300px;
+                    margin-top: -20px;
+                    margin-left: -20px;
+                }
+                
+                .skills {
+                    width: 100%;
+                    background-color: white;
+                    display: flex;
+                    height: 700px;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-top: 50px;
+                    align-items: center;
+                }
+                
+                .html,
+                .css,
+                .javascript {
+                    width: 150px;
+                    height: 130px;
+                    border: 1px solid gray;
+                    box-shadow: 3px 3px 15px black;
+                    cursor: pointer;
+                    margin: 40px;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding-top: 30px;
+                    transition: all 0.3s ease;
+                }
+                
+                .html img {
+                    transition: all 0.3s ease;
+                }
+                
+                .css img {
+                    transition: all 0.3s ease;
+                }
+                
+                .javascript img {
+                    transition: all 0.3s ease;
+                }
+                
+                .des {
+                    font-size: 20px;
+                    font-weight: bold;
+                    position: relative;
+                }
+                
+                #work1 {
+                    position: absolute;
+                    font-size: 40px;
+                    cursor: pointer;
+                    color: #1E6D00;
+                }
+                
+                #work1::after {
+                    content: '';
+                    animation: name infinite 4s;
+                }
+                
+                @keyframes name {
+                    0% {
+                        content: ' web designer';
+                    }
+                    100% {
+                        content: ' programmer';
+                    }
+                }
+                /*skills row*/
+                
+                .fisrtrow,
+                .secondrow {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                
+                .fisrtrow {
+                    margin-top: 500px;
+                    transition: all 2s ease;
+                }
+                
+                .box2 img {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 200px;
+                }
+                
+                .myName {
+                    width: 300px;
+                    text-align: center;
+                }
+                /*progress bar */
+                
+                .proghtml2 {
+                    width: 90%;
+                    height: 15px;
+                    background-color: #8ab6d6;
+                }
+                
+                .proghtml1 {
+                    width: 90%;
+                    height: 15px;
+                    background-color: #8ab6d6;
+                }
+                
+                .proghtml3 {
+                    width: 70%;
+                    height: 15px;
+                    background-color: #8ab6d6;
+                }
+                
+                .proghtml4 {
+                    width: 90%;
+                    height: 15px;
+                    background-color: #8ab6d6;
+                }
+                
+                .proghtml5 {
+                    width: 90%;
+                    height: 15px;
+                    background-color: #8ab6d6;
+                }
+                
+                .difprog {
+                    width: 90%;
+                    height: 15px;
+                    margin-left: 5px;
+                    background-color: #E8E8E8;
+                }
+                
+                .Contact-info {
+                    height: 100px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    padding-top: 30px;
+                    background-color: white;
+                }
+                
+                .number,
+                .gmail {
+                    display: flex;
+                }
+                
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+                
+                .pics {
+                    margin-right: 10px;
+                }
+                
+                .someinfo {
+                    background-color: white;
+                    height: 200px;
+                    width: 300px;
+                    border-radius: 40px;
+                    padding: 50px;
+                    text-align: center;
+                }
+                
+                .some {
+                    font-weight: bold;
+                }
+                
+                .title {
+                    font-size: 30px;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                
+                .line {
+                    width: 400px;
+                    height: 10px;
+                    background-color: blue;
+                    border-radius: 100%;
+                }
+                /* The Modal (background) */
+                
+                .modal {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    /* Stay in place */
+                    z-index: 1;
+                    /* Sit on top */
+                    padding-top: 70px;
+                    /* Location of the box */
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    /* Full width */
+                    height: 100%;
+                    /* Full height */
+                    overflow: scroll;
+                    /* Enable scroll if needed */
+                    background-color: rgb(0, 0, 0);
+                    /* Fallback color */
+                    background-color: rgba(0, 0, 0, 0.4);
+                    /* Black w/ opacity */
+                }
+                /* Modal Header */
+                
+                .modal-title span {
+                    font-weight: bold;
+                }
+                
+                #img {
+                    margin-left: -600px;
+                    transition: all 3s;
+                }
+                
+                .modal-header {
+                    padding: 2px 16px;
+                    background-color: #5cb85c;
+                    color: white;
+                    border-radius: 20px;
+                }
+                /* Modal Body */
+                
+                .modal-body {
+                    padding: 2px 16px;
+                }
+                /* Modal Content */
+                
+                .modal-content,
+                .modal-description {
+                    position: relative;
+                    background-color: #fefefe;
+                    margin: auto;
+                    padding: 0;
+                    border: 1px solid #888;
+                    width: 50%;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    animation-name: animatetop;
+                    animation-duration: 0.4s;
+                    display: flex;
+                    margin-top: 10px;
+                    flex-direction: column;
+                }
+                
+                .modal-description {
+                    width: 42%;
+                    padding: 50px;
+                    margin-bottom: 100px;
+                    font-size: 20px;
+                    background-color: rgba(231, 231, 231, 0.733);
+                }
+                /* The Close Button */
+                
+                .close {
+                    color: black;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: #000;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+                
+                .modal-header {
+                    padding: 2px 16px;
+                    background-color: white;
+                    color: black;
+                    text-align: center;
+                }
+                /* Add Animation */
+                
+                @keyframes animatetop {
+                    from {
+                        width: 1px;
+                        opacity: 0
+                    }
+                }
+                
+                .nav-hidden {
+                    visibility: hidden;
+                    width: 100%;
+                    background-color: #2978b5;
+                    text-align: center;
+                }
+                
+                .nav-hidden li a {
+                    color: white;
+                }
+                
+                li {
+                    list-style-type: none;
+                    margin: 20px;
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                /*---------------------------------------------------------------------------------------------------*/
+                /*---------------------------------------------------------------------------------------------------*/

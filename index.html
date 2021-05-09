@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>John Riel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="response.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-mobile" id="navmovile">
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+        <!--navigation bars-->
+        <div class="nav-bars">
+            <a href="#1" class="nav">About</a>
+            <a href="#2" class="nav">Projects</a>
+            <a href="#3" class="nav">Skills</a>
+            <a href="#4" class="nav">Services</a>
+            <!-- Trigger/Open The Modal -->
+        </div>
+    </header>
+    <div class="scrolltop" onclick="scrollToTop()" id="scroll">
+        <a href="#1"> <img id="arrow" src="photo/arrow.png" width="100%" height="100%"></a>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <div class="modal-title">
+                    <span id="modaltitle">2d Mobile game</span>
+                </div>
+            </div>
+            <div class="modal-body">
+
+                <img width="100%" id="image1">
+            </div>
+        </div>
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <img width="100%" id="image2">
+            </div>
+        </div>
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <img width="100%" id="image3">
+            </div>
+        </div>
+        <div class="modal-description">
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="nav-hidden">
+            <ul>
+                <li><a href="#1">About</a></li>
+                <li><a href="#2">Projects</a></li>
+                <li><a href="#3">Skills</a></li>
+                <li><a href="#4">Services</a></li>
+            </ul>
+        </div>
+
+
+        <!----about me-->
+
+        <div class="about" id="1">
+            <div class="box1">
+                <div class="nametext">
+                    <span id="work1">I am a</span>
+
+
+                </div>
+                <p>
+                    Fresh BSIT graduate from Bulacan State university, focusing on web desinging ,create and code web pages, using both technical and non-technical skills to produce websites that fit your customers' requirements.</p>
+            </div>
+            <div class="box2">
+
+                <img src="photo/japok.png"><br>
+                <div class="myName">
+                    <span id="name"> HI I'M</span><br>
+                    <span id="name"><b>JOHNRIEL TALADTAD</b></span>
+                </div>
+            </div>
+        </div>
+
+        <!--projects-->
+        <div class="projects" id="2">
+            <div>
+
+            </div>
+            <div class="one">
+                <img src="photo/asd.jpg" width="400px" height="250px" id="mg">
+            </div>
+            <div class="two">
+                <img src="photo/proj2.png" width="400px" height="250px" id="mg1">
+            </div>
+        </div>
+
+        <!---skills -->
+        <div class="skills" id="3">
+            <span class="title"> Skills</span>
+            <div class="line"></div>
+            <div class="fisrtrow" id="firstrow">
+
+                <div class="html" onmouseover="htmlpic()" onmouseout="htmlpicout()" id="htmlbox">
+                    <img src="photo/html.png" width="80px" height="80px" id="pic1">
+                    <p class="des"> HTML</p>
+
+                    <!--progressbar-->
+                    <div class="difprog">
+                        <div class="proghtml1">
+                            90%
+
+                        </div>
+                    </div>
+                </div>
+                <div class="css" onmouseover="csspic()" onmouseout="csspicout()" id="cssbox">
+                    <img src="photo/css.png" width="80px" height="80px" id="csspic">
+                    <p class="des"> CSS</p>
+                    <!--progressbar-->
+                    <div class="difprog">
+                        <div class="proghtml2">
+                            90%
+                        </div>
+                    </div>
+                </div>
+
+                <div class="javascript" onmouseover="jspic()" onmouseout="jspicout()" id="jsbox">
+                    <img src="photo/js.png" width="80px" height="80px" id="jspic">
+                    <p class="des"> JS</p>
+                    <!--progressbar-->
+                    <div class="difprog">
+                        <div class="proghtml3">
+                            70%
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secondrow">
+                <div class="html" onmouseover="cspic()" onmouseout="cspicout()" id="csbox">
+                    <img src="photo/cs.png" width="80px" height="80px" id="cspic">
+                    <p class="des"> C#</p>
+                    <div class="difprog">
+                        <div class="proghtml4">
+                            90%
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="html" onmouseover="jqpic()" onmouseout="jqpicout()" id="jquerybox">
+                    <img src="photo/jq.png" width="80px" height="80px" id="jqpic">
+                    <p class="des"> Jquery</p>
+                    <div class="difprog">
+                        <div class="proghtml5">
+                            90%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---Srvices-->
+        <div class="services" id="4">
+            <div class="services-content">
+                <img src="photo/japok2.png" width="100%" height="110%" id="img">
+            </div>
+            <div class="services-content">
+                <div id="col1">
+                    <div class="title">UI/UX designer</div>
+                    <div class="line"></div>
+                    <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officiis obcaecati eligendi doloremque, esse nostrum facere ducimus porro at deserunt laborum earum?
+                        </span>
+                    </div>
+                </div>
+                <div id="col2">
+                    <div class="title">Programmer</div>
+                    <div class="line"></div>
+                    <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officiis obcaecati eligendi doloremque, esse nostrum facere ducimus porro at deserunt laborum earum?
+                        </span>
+                    </div>
+                </div>
+                <div id="col3">
+                    <div class="title">Web Designer </div>
+                    <div class="line"></div>
+                    <div class="description"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officiis obcaecati eligendi doloremque, esse nostrum facere ducimus porro at deserunt laborum earum?
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Contact-info">
+            <div class="number">
+                <img src="photo/phone.png" width="20px" height="20px" class="pics">
+                <span class="text">09101672390</span>
+            </div>
+            <div class="gmail">
+                <img src="photo/gmail.png" width="20px" height="20px" class="pics">
+                <span class="text">Taladtadjohnriel45@gmail.com</span>
+            </div>
+            <div class="gmail">
+                <img src="photo/fb.png" width="20px" height="20px" class="pics">
+                <a class="text" href="https://www.facebook.com/johnriel.abad/">John Riel A Taladad</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+<script src="js/js.js"></script>
+
+</html>
