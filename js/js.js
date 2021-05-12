@@ -176,8 +176,11 @@ window.addEventListener('scroll', () => {
     const scrolleddown = window.scrollY;
     if (scrolleddown > 600) {
         document.getElementById("firstrow").style.marginTop = "0px";
+        document.getElementById("firstrow").style.opacity = "1";
+        document.getElementById("secondrow").style.opacity = "1";
     } else if (scrolleddown < 600) {
         document.getElementById("firstrow").style.marginTop = "100px";
+        document.getElementById("secondrow").style.opacity = "0";
     }
 
     if (scrolleddown > 1100) {
