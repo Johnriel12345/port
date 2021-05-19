@@ -168,21 +168,30 @@
                 }
                 
                 #mg,
-                #mg1 {
+                #mg1,
+                #mg2 {
+                    width: 450px;
                     border-radius: 10px;
-                    transition: margin 0.5s, width 0.5s, height 0.5s;
+                    transition: all 0.5s;
                     cursor: pointer;
                 }
                 
                 #mg:hover {
-                    width: 450px;
+                    width: 550px;
                     height: 300px;
                     margin-top: -20px;
                     margin-left: -20px;
                 }
                 
                 #mg1:hover {
-                    width: 450px;
+                    width: 550px;
+                    height: 300px;
+                    margin-top: -20px;
+                    margin-left: -20px;
+                }
+                
+                #mg2:hover {
+                    width: 550px;
                     height: 300px;
                     margin-top: -20px;
                     margin-left: -20px;
@@ -206,7 +215,6 @@
                     height: 130px;
                     border: 1px solid gray;
                     box-shadow: 3px 3px 15px black;
-                    cursor: pointer;
                     margin: 40px;
                     border-radius: 5px;
                     text-align: center;

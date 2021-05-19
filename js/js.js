@@ -11,8 +11,6 @@ $(document).ready(function() {
     });
 
 });
-
-
 //animations in skills section 
 function csspic() {
     var x = document.getElementById('csspic');
@@ -21,7 +19,6 @@ function csspic() {
     document.getElementById("jsbox").style.opacity = "0.5";
     document.getElementById("csbox").style.opacity = "0.5";
     document.getElementById("jquerybox").style.opacity = "0.5";
-
 }
 
 function csspicout() {
@@ -31,7 +28,6 @@ function csspicout() {
     document.getElementById("jsbox").style.opacity = "1";
     document.getElementById("csbox").style.opacity = "1";
     document.getElementById("jquerybox").style.opacity = "1";
-
 }
 
 function htmlpic() {
@@ -129,6 +125,7 @@ var btn = document.getElementById("mg");
 
 var span = document.getElementsByClassName("close")[0];
 const btn2 = document.getElementById("mg1");
+const btn3 = document.getElementById("mg2");
 
 // When the user clicks the button, open the modal(enrollment)
 btn2.onclick = function() {
@@ -139,24 +136,29 @@ btn2.onclick = function() {
     document.getElementById("image3").src = "photo/proj4.png"
     document.getElementById("modaltitle").innerHTML = "Enrollment system"
     document.querySelector(".modal-description").innerHTML = "an offline enrollment system that will help lamb's journey (private school) to reduce time in student registration and save copies of agreement via pdf with auto generated filename to help navigate the file easily. This will help the transaction to safe because they will no longer need to face each other "
-
 }
 
 // When the user clicks the button, open the modal(unity)
 btn.onclick = function() {
-    modal.style.display = "block";
-    arrow.style.display = "none";
-    document.getElementById("image1").src = "photo/town1.png"
-    document.getElementById("image2").src = "photo/town2.png"
-    document.getElementById("image3").src = "photo/town3.png"
-    document.getElementById("modaltitle").innerHTML = "2d Mobile Game"
-    document.querySelector(".modal-description").innerHTML = "This study aimed the used of mobile games in mathematical education for grade school students. It has been observed that Mobile devices may be used to improve the ability to learn. Thus, the development of Educational application is essential, in particular, in order to improve mathematics - related the skills of the children.Although there are many online applicationsfor this purpose.Nonetheless, there is A simple, interactive and intuitive android - based application is needed Enhancing children skills in basic mathematical concepts.In this work, we develop an educational application, named“ Adventure of Atlas” by using Unity Game Engine and C# programming language, which the users allow to learn basic math"
-
-
-
-}
-
-// When the user clicks on <span> (x), close the modal
+        modal.style.display = "block";
+        arrow.style.display = "none";
+        document.getElementById("image1").src = "photo/town1.png"
+        document.getElementById("image2").src = "photo/town2.png"
+        document.getElementById("image3").src = "photo/town3.png"
+        document.getElementById("modaltitle").innerHTML = "2d Mobile Game"
+        document.querySelector(".modal-description").innerHTML = "This study aimed the used of mobile games in mathematical education for grade school students. It has been observed that Mobile devices may be used to improve the ability to learn. Thus, the development of Educational application is essential, in particular, in order to improve mathematics - related the skills of the children.Although there are many online applicationsfor this purpose.Nonetheless, there is A simple, interactive and intuitive android - based application is needed Enhancing children skills in basic mathematical concepts.In this work, we develop an educational application, named“ Adventure of Atlas” by using Unity Game Engine and C# programming language, which the users allow to learn basic math"
+    }
+    //opens the third project
+btn3.onclick = function() {
+        modal.style.display = "block";
+        arrow.style.display = "none";
+        document.getElementById("image1").src = "photo/page2.png"
+        document.getElementById("image2").src = "photo/page3.png"
+        document.getElementById("image3").src = "photo/page4.png"
+        document.getElementById("modaltitle").innerHTML = "BulSU web page"
+        document.querySelector(".modal-description").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officii laborum earum ? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officii laborum earum"
+    }
+    // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
     arrow.style.display = "block";
