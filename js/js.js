@@ -1,206 +1,134 @@
-//text animations
-$(document).ready(function() {
-    $("#work2").hide();
-    $("#work3").hide();
-    $(".nav-hidden").hide();
-    $("#navmovile").click(function() {
-        $(".nav-hidden").slideToggle();
-    });
-    $("li").click(function() {
-        $(".nav-hidden").slideToggle();
-    });
-
-});
-//animations in skills section 
-function csspic() {
-    var x = document.getElementById('csspic');
-    x.style.margin = "-20px 0px 20px 0px";
-    document.getElementById("htmlbox").style.opacity = "0.5";
-    document.getElementById("jsbox").style.opacity = "0.5";
-    document.getElementById("csbox").style.opacity = "0.5";
-    document.getElementById("jquerybox").style.opacity = "0.5";
+//appear navigation buttons
+function navin() {
+    const x = document.querySelectorAll(".navi");
+    for (i of x) {
+        i.classList.toggle("open");
+    }
 }
 
-function csspicout() {
-    var x = document.getElementById('csspic');
-    x.style.margin = "0px 0px 0px 0px";
-    document.getElementById("htmlbox").style.opacity = "1";
-    document.getElementById("jsbox").style.opacity = "1";
-    document.getElementById("csbox").style.opacity = "1";
-    document.getElementById("jquerybox").style.opacity = "1";
+function navout() {
+    const x = document.querySelectorAll(".navi");
+    for (i of x) {
+        i.classList.remove("open");
+    }
 }
+document.querySelector(".image").classList.add("showpic");
+//geeting the elemet
+const myName = document.querySelector(".name");
+const bgtext = document.querySelector(".bgtext");
 
-function htmlpic() {
-    var x = document.getElementById('pic1');
-    x.style.margin = "-20px 0px 20px 0px";
-    document.getElementById("cssbox").style.opacity = "0.5";
-    document.getElementById("jsbox").style.opacity = "0.5";
-    document.getElementById("csbox").style.opacity = "0.5";
-    document.getElementById("jquerybox").style.opacity = "0.5";
-}
+//gettung the text of the element
+const nameStr = myName.textContent;
+const bgStr = bgtext.textContent;
 
-function htmlpicout() {
-    var x = document.getElementById('pic1');
-    x.style.margin = "0px 0px 0px 0px";
-    document.getElementById("cssbox").style.opacity = "1";
-    document.getElementById("jsbox").style.opacity = "1";
-    document.getElementById("csbox").style.opacity = "1";
-    document.getElementById("jquerybox").style.opacity = "1";
+//putting the value into string
+const nameSplit = nameStr.split("");
+const bgSplit = bgStr.split("");
 
-}
 
-function jspic() {
-    var x = document.getElementById('jspic');
-    x.style.margin = "-20px 0px 20px 0px";
-    document.getElementById("htmlbox").style.opacity = "0.5";
-    document.getElementById("cssbox").style.opacity = "0.5";
-    document.getElementById("csbox").style.opacity = "0.5";
-    document.getElementById("jquerybox").style.opacity = "0.5";
-}
-
-function jspicout() {
-    var x = document.getElementById('jspic');
-    x.style.margin = "0px 0px 0px 0px";
-    document.getElementById("htmlbox").style.opacity = "1";
-    document.getElementById("cssbox").style.opacity = "1";
-    document.getElementById("csbox").style.opacity = "1";
-    document.getElementById("jquerybox").style.opacity = "1";
+//removing the text and replacing it with the span
+bgtext.textContent = ""
+myName.textContent = ""
+for (let i = 0; i < nameSplit.length; i++) {
+    myName.innerHTML += "<span>" + nameSplit[i] + "</span>";
 
 }
-
-function cspic() {
-    var x = document.getElementById('cspic');
-    x.style.margin = "-20px 0px 20px 0px";
-    document.getElementById("htmlbox").style.opacity = "0.5";
-    document.getElementById("cssbox").style.opacity = "0.5";
-    document.getElementById("jsbox").style.opacity = "0.5";
-    document.getElementById("jquerybox").style.opacity = "0.5";
-}
-
-function cspicout() {
-    var x = document.getElementById('cspic');
-    x.style.margin = "0px 0px 0px 0px";
-    document.getElementById("htmlbox").style.opacity = "1";
-    document.getElementById("cssbox").style.opacity = "1";
-    document.getElementById("jsbox").style.opacity = "1";
-    document.getElementById("jquerybox").style.opacity = "1";
+for (let i = 0; i < bgSplit.length; i++) {
+    bgtext.innerHTML += "<span>" + bgSplit[i] + "</span>";
 
 }
+let char = 0;
+let timer = setInterval(onTick, 50);
 
-function jqpic() {
-    var x = document.getElementById('jqpic');
-    x.style.margin = "-20px 0px 20px 0px";
-    document.getElementById("htmlbox").style.opacity = "0.5";
-    document.getElementById("cssbox").style.opacity = "0.5";
-    document.getElementById("csbox").style.opacity = "0.5";
-    document.getElementById("jsbox").style.opacity = "0.5";
+//text animation
+function onTick() {
+    const span = document.querySelectorAll(".details span")[char];
+    span.classList.add("animate");
+
+    char++;
+    if (char === nameSplit.length) {
+        complete()
+        return;
+    }
+}
+let char1 = 0;
+let timer1 = setInterval(onTickbg, 50);
+//background text animation
+function onTickbg() {
+    const bgSpan = document.querySelectorAll(".bgtext span")[char1];
+    bgSpan.classList.add("bganimate");
+    char1++;
+    if (char1 === bgSplit.length) {
+        clearInterval(timer1);
+        timer1 = null;
+        return;
+    }
 }
 
-function jqpicout() {
-    var x = document.getElementById('jqpic');
-    x.style.margin = "0px 0px 0px 0px";
-    document.getElementById("htmlbox").style.opacity = "1";
-    document.getElementById("cssbox").style.opacity = "1";
-    document.getElementById("csbox").style.opacity = "1";
-    document.getElementById("jsbox").style.opacity = "1";
-}
-window.addEventListener("scroll", function() {
-    var scroll = document.querySelector('.scrolltop');
-    scroll.classList.toggle("active", window.scrollY > 500)
-});
+//text finished animate
+function complete() {
+    clearInterval(timer);
 
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    timer = null;
+}
+
+//scrollanimation in hero section
+window.addEventListener("scroll", () => {
+    const scrolling = window.scrollY;
+    if (scrolling > 270) {
+        document.querySelector(".image").style.opacity = "0";
+
+
+    } else {
+        document.querySelector(".image").style.opacity = "1";
+
+    }
+
+    console.log(scrolling);
+})
+
+const project = document.querySelectorAll(".projects");
+const title = document.querySelectorAll(".projectTitle");
+
+//firs project animation
+
+gsap.from(title[0], {
+    scrollTrigger: {
+        trigger: project[0],
+        start: "top 30%",
+        end: "bottom 80%",
+        toggleActions: "restart reverse play reverse"
+    },
+    x: -1000,
+})
+
+gsap.to(project[0], {
+
+        scrollTrigger: {
+            trigger: project[0],
+            start: "top top",
+            end: "bottom bottom",
+            pin: title[0]
+        },
     })
-}
+    //second project animation
+    //firs project animation
+gsap.from(title[1], {
+    scrollTrigger: {
+        trigger: project[1],
+        start: "top 30%",
+        end: "bottom 80%",
+        toggleActions: "restart reverse play reverse"
+    },
+    x: 1000,
+})
 
-var arrow = document.getElementById("arrow");
-// Get the modal
-var modal = document.getElementById("myModal");
+gsap.to(project[1], {
 
-// Get the button that opens the modal
-var btn = document.getElementById("mg");
-
-var span = document.getElementsByClassName("close")[0];
-const btn2 = document.getElementById("mg1");
-const btn3 = document.getElementById("mg2");
-
-// When the user clicks the button, open the modal(enrollment)
-btn2.onclick = function() {
-    modal.style.display = "block";
-    arrow.style.display = "none";
-    document.getElementById("image1").src = "photo/proj1.png"
-    document.getElementById("image2").src = "photo/proj3.png"
-    document.getElementById("image3").src = "photo/proj4.png"
-    document.getElementById("modaltitle").innerHTML = "Enrollment system"
-    document.querySelector(".modal-description").innerHTML = "an offline enrollment system that will help lamb's journey (private school) to reduce time in student registration and save copies of agreement via pdf with auto generated filename to help navigate the file easily. This will help the transaction to safe because they will no longer need to face each other "
-}
-
-// When the user clicks the button, open the modal(unity)
-btn.onclick = function() {
-        modal.style.display = "block";
-        arrow.style.display = "none";
-        document.getElementById("image1").src = "photo/town1.png"
-        document.getElementById("image2").src = "photo/town2.png"
-        document.getElementById("image3").src = "photo/town3.png"
-        document.getElementById("modaltitle").innerHTML = "2d Mobile Game"
-        document.querySelector(".modal-description").innerHTML = "This study aimed the used of mobile games in mathematical education for grade school students. It has been observed that Mobile devices may be used to improve the ability to learn. Thus, the development of Educational application is essential, in particular, in order to improve mathematics - related the skills of the children.Although there are many online applicationsfor this purpose.Nonetheless, there is A simple, interactive and intuitive android - based application is needed Enhancing children skills in basic mathematical concepts.In this work, we develop an educational application, named“ Adventure of Atlas” by using Unity Game Engine and C# programming language, which the users allow to learn basic math"
-    }
-    //opens the third project
-btn3.onclick = function() {
-        modal.style.display = "block";
-        arrow.style.display = "none";
-        document.getElementById("image1").src = "photo/page2.png"
-        document.getElementById("image2").src = "photo/page3.png"
-        document.getElementById("image3").src = "photo/page4.png"
-        document.getElementById("modaltitle").innerHTML = "BulSU web page"
-        document.querySelector(".modal-description").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officii laborum earum ? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officii laborum earum"
-    }
-    // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-    arrow.style.display = "block";
-
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        arrow.style.display = "block";
-    }
-}
-
-//scroll effect in hero section
-window.addEventListener('scroll', () => {
-    const scrolleddown = window.scrollY;
-    if (scrolleddown > 600) {
-        document.getElementById("firstrow").style.marginTop = "0px";
-        document.getElementById("firstrow").style.opacity = "1";
-        document.getElementById("secondrow").style.opacity = "1";
-    } else if (scrolleddown < 600) {
-        document.getElementById("firstrow").style.marginTop = "100px";
-        document.getElementById("secondrow").style.opacity = "0";
-    }
-
-    if (scrolleddown > 1100) {
-        document.getElementById("col1").style.opacity = "1";
-        document.getElementById("col2").style.opacity = "1";
-        document.getElementById("col3").style.opacity = "1";
-        document.getElementById("img").style.marginLeft = "0px";
-    } else if (scrolleddown < 1100) {
-        document.getElementById("col1").style.opacity = "0";
-        document.getElementById("col2").style.opacity = "0";
-        document.getElementById("col3").style.opacity = "0";
-        document.getElementById("img").style.marginLeft = "-600px";
-    }
-
-    if (scrolleddown > 250)
-        document.getElementById("1").style.filter = "blur(5px)";
-    else if (scrolleddown < 250)
-        document.getElementById("1").style.filter = "blur(0px)";
-
-
-});
+    scrollTrigger: {
+        trigger: project[1],
+        start: "top top",
+        end: "bottom bottom",
+        pin: title[1]
+    },
+})

@@ -1,149 +1,166 @@
 "use strict";
 
-//text animations
-$(document).ready(function () {
-  $("#work2").hide();
-  $("#work3").hide();
-  $(".nav-hidden").hide();
-  $("#navmovile").click(function () {
-    $(".nav-hidden").slideToggle();
-  });
-  $("li").click(function () {
-    $(".nav-hidden").slideToggle();
-  });
-}); //animations in skills section 
+//appear navigation buttons
+function navin() {
+  var x = document.querySelectorAll(".navi");
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
 
-function csspic() {
-  var x = document.getElementById('csspic');
-  x.style.margin = "-20px 0px 20px 0px";
-  document.getElementById("htmlbox").style.opacity = "0.5";
-  document.getElementById("jsbox").style.opacity = "0.5";
-  document.getElementById("csbox").style.opacity = "0.5";
-  document.getElementById("jquerybox").style.opacity = "0.5";
+  try {
+    for (var _iterator = x[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      i = _step.value;
+      i.classList.toggle("open");
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
 }
 
-function csspicout() {
-  var x = document.getElementById('csspic');
-  x.style.margin = "0px 0px 0px 0px";
-  document.getElementById("htmlbox").style.opacity = "1";
-  document.getElementById("jsbox").style.opacity = "1";
-  document.getElementById("csbox").style.opacity = "1";
-  document.getElementById("jquerybox").style.opacity = "1";
+function navout() {
+  var x = document.querySelectorAll(".navi");
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = x[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      i = _step2.value;
+      i.classList.remove("open");
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+        _iterator2["return"]();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
 }
 
-function htmlpic() {
-  var x = document.getElementById('pic1');
-  x.style.margin = "-20px 0px 20px 0px";
-  document.getElementById("cssbox").style.opacity = "0.5";
-  document.getElementById("jsbox").style.opacity = "0.5";
-  document.getElementById("csbox").style.opacity = "0.5";
-  document.getElementById("jquerybox").style.opacity = "0.5";
+document.querySelector(".image").classList.add("showpic"); //geeting the elemet
+
+var myName = document.querySelector(".name");
+var bgtext = document.querySelector(".bgtext"); //gettung the text of the element
+
+var nameStr = myName.textContent;
+var bgStr = bgtext.textContent; //putting the value into string
+
+var nameSplit = nameStr.split("");
+var bgSplit = bgStr.split(""); //removing the text and replacing it with the span
+
+bgtext.textContent = "";
+myName.textContent = "";
+
+for (var _i = 0; _i < nameSplit.length; _i++) {
+  myName.innerHTML += "<span>" + nameSplit[_i] + "</span>";
 }
 
-function htmlpicout() {
-  var x = document.getElementById('pic1');
-  x.style.margin = "0px 0px 0px 0px";
-  document.getElementById("cssbox").style.opacity = "1";
-  document.getElementById("jsbox").style.opacity = "1";
-  document.getElementById("csbox").style.opacity = "1";
-  document.getElementById("jquerybox").style.opacity = "1";
+for (var _i2 = 0; _i2 < bgSplit.length; _i2++) {
+  bgtext.innerHTML += "<span>" + bgSplit[_i2] + "</span>";
 }
 
-function jspic() {
-  var x = document.getElementById('jspic');
-  x.style.margin = "-20px 0px 20px 0px";
-  document.getElementById("htmlbox").style.opacity = "0.5";
-  document.getElementById("cssbox").style.opacity = "0.5";
-  document.getElementById("csbox").style.opacity = "0.5";
-  document.getElementById("jquerybox").style.opacity = "0.5";
+var _char = 0;
+var timer = setInterval(onTick, 50); //text animation
+
+function onTick() {
+  var span = document.querySelectorAll(".details span")[_char];
+
+  span.classList.add("animate");
+  _char++;
+
+  if (_char === nameSplit.length) {
+    complete();
+    return;
+  }
 }
 
-function jspicout() {
-  var x = document.getElementById('jspic');
-  x.style.margin = "0px 0px 0px 0px";
-  document.getElementById("htmlbox").style.opacity = "1";
-  document.getElementById("cssbox").style.opacity = "1";
-  document.getElementById("csbox").style.opacity = "1";
-  document.getElementById("jquerybox").style.opacity = "1";
-}
+var char1 = 0;
+var timer1 = setInterval(onTickbg, 50); //background text animation
 
-function cspic() {
-  var x = document.getElementById('cspic');
-  x.style.margin = "-20px 0px 20px 0px";
-  document.getElementById("htmlbox").style.opacity = "0.5";
-  document.getElementById("cssbox").style.opacity = "0.5";
-  document.getElementById("jsbox").style.opacity = "0.5";
-  document.getElementById("jquerybox").style.opacity = "0.5";
-}
+function onTickbg() {
+  var bgSpan = document.querySelectorAll(".bgtext span")[char1];
+  bgSpan.classList.add("bganimate");
+  char1++;
 
-function cspicout() {
-  var x = document.getElementById('cspic');
-  x.style.margin = "0px 0px 0px 0px";
-  document.getElementById("htmlbox").style.opacity = "1";
-  document.getElementById("cssbox").style.opacity = "1";
-  document.getElementById("jsbox").style.opacity = "1";
-  document.getElementById("jquerybox").style.opacity = "1";
-}
+  if (char1 === bgSplit.length) {
+    clearInterval(timer1);
+    timer1 = null;
+    return;
+  }
+} //text finished animate
 
-function jqpic() {
-  var x = document.getElementById('jqpic');
-  x.style.margin = "-20px 0px 20px 0px";
-  document.getElementById("htmlbox").style.opacity = "0.5";
-  document.getElementById("cssbox").style.opacity = "0.5";
-  document.getElementById("csbox").style.opacity = "0.5";
-  document.getElementById("jsbox").style.opacity = "0.5";
-}
 
-function jqpicout() {
-  var x = document.getElementById('jqpic');
-  x.style.margin = "0px 0px 0px 0px";
-  document.getElementById("htmlbox").style.opacity = "1";
-  document.getElementById("cssbox").style.opacity = "1";
-  document.getElementById("csbox").style.opacity = "1";
-  document.getElementById("jsbox").style.opacity = "1";
-}
+function complete() {
+  clearInterval(timer);
+  timer = null;
+} //scrollanimation in hero section
+
 
 window.addEventListener("scroll", function () {
-  var scroll = document.querySelector('.scrolltop');
-  scroll.classList.toggle("active", window.scrollY > 500);
-});
+  var scrolling = window.scrollY;
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-var arrow = document.getElementById("arrow"); // Get the modal
-
-var modal = document.getElementById("myModal"); // Get the button that opens the modal
-
-var btn = document.getElementById("mg"); // Get the <span> element that closes the modal
-
-var span = document.getElementsByClassName("close")[0]; // When the user clicks the button, open the modal 
-
-btn.onclick = function () {
-  modal.style.display = "block";
-  arrow.style.display = "none";
-}; // When the user clicks on <span> (x), close the modal
-
-
-span.onclick = function () {
-  modal.style.display = "none";
-  arrow.style.display = "block";
-}; // When the user clicks anywhere outside of the modal, close it
-
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    arrow.style.display = "block";
+  if (scrolling > 270) {
+    document.querySelector(".image").style.opacity = "0";
+  } else {
+    document.querySelector(".image").style.opacity = "1";
   }
-}; //scroll effect in hero section
 
+  console.log(scrolling);
+});
+var project = document.querySelectorAll(".projects");
+var title = document.querySelectorAll(".projectTitle"); //firs project animation
 
-window.addEventListener('scroll', function () {
-  var scrolleddown = window.scrollY;
-  if (scrolleddown > 250) document.getElementById("1").style.filter = "blur(5px)";else if (scrolleddown < 250) document.getElementById("1").style.filter = "blur(0px)";
+gsap.from(title[0], {
+  scrollTrigger: {
+    trigger: project[0],
+    start: "top 30%",
+    end: "bottom 80%",
+    toggleActions: "restart reverse play reverse"
+  },
+  x: -1000
+});
+gsap.to(project[0], {
+  scrollTrigger: {
+    trigger: project[0],
+    start: "top top",
+    end: "bottom bottom",
+    pin: title[0]
+  }
+}); //second project animation
+//firs project animation
+
+gsap.from(title[1], {
+  scrollTrigger: {
+    trigger: project[1],
+    start: "top 30%",
+    end: "bottom 80%",
+    toggleActions: "restart reverse play reverse"
+  },
+  x: 1000
+});
+gsap.to(project[1], {
+  scrollTrigger: {
+    trigger: project[1],
+    start: "top top",
+    end: "bottom bottom",
+    pin: title[1]
+  }
 });

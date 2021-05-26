@@ -1,228 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>John Riel</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="response.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="photo/logo.png" type="image/gif" sizes="16x16">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOHN RIEL</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/response.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ec0bf7f3bf.js" crossorigin="anonymous"></script>
+
+
+
 </head>
 
 <body>
 
-    <header>
-        <div class="nav-mobile" id="navmovile">
-            <div></div>
-            <div></div>
-            <div></div>
-
-        </div>
-        <!--navigation bars-->
-        <div class="nav-bars">
-            <a href="#1" class="nav">About</a>
-            <a href="#2" class="nav">Projects</a>
-            <a href="#3" class="nav">Skills</a>
-            <a href="#4" class="nav">Services</a>
-
-            <!-- Trigger/Open The Modal -->
-        </div>
-    </header>
-    <div class="scrolltop" onclick="scrollToTop()" id="scroll">
-        <a href="#1"> <img id="arrow" src="photo/arrow.png" width="100%" height="100%"></a>
-    </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <div class="modal-title">
-                    <span id="modaltitle">2d Mobile game</span>
-                </div>
-            </div>
-            <div class="modal-body">
-
-                <img width="100%" id="image1">
-            </div>
-        </div>
-        <div class="modal-content">
-
-            <div class="modal-body">
-
-                <img width="100%" id="image2">
-            </div>
-        </div>
-        <div class="modal-content">
-
-            <div class="modal-body">
-
-                <img width="100%" id="image3">
-            </div>
-        </div>
-        <div class="modal-description">
-
-        </div>
-
-    </div>
     <div class="container">
-        <div class="nav-hidden">
-            <ul>
-                <li><a href="#1">About</a></li>
-                <li><a href="#2">Projects</a></li>
-                <li><a href="#3">Skills</a></li>
-                <li><a href="#4">Services</a></li>
 
-            </ul>
+        <header>
+            <img src="photo/logo.png " height="50px " width="70px "><b onclick="navin();">MENU</b>
+        </header>
+        <div class="hero">
+            <!--navigation buttons-->
+            <nav>
+
+                <a href="#about" class="navi" onclick="navout();">ABOUT</a>
+                <a href="#works" class="navi" onclick="navout();">WORKS</a>
+
+            </nav>
+
+            <!--my name and my contact information-->
+            <div class="details ">
+                <h3 class="name">JOHN RIEL</h3>
+                <p> <i class="fas fa-phone"></i> 09466947653</p>
+                <p><i class="fas fa-envelope-square"></i> taladtadjohnriel45@gmail.com</p>
+                <a href="https://www.facebook.com/johnriel.abad/"><i class="fab fa-facebook-f"></i> John Riel Abad Taladtad</a>
+            </div>
+
+            <!--the image in the center of the page-->
+            <div class="image ">
+                <img src="photo/New folder/images/japs1_01.gif">
+                <img src="photo/New folder/images/japs1_02.gif">
+                <img src="photo/New folder/images/japs1_03.gif">
+                <img src="photo/New folder/images/japs1_04.gif">
+                <img src="photo/New folder/images/japs1_05.gif">
+                <img src="photo/New folder/images/japs1_06.gif">
+                <img src="photo/New folder/images/japs1_07.gif">
+                <img src="photo/New folder/images/japs1_08.gif">
+                <img src="photo/New folder/images/japs1_09.gif">
+                <img src="photo/New folder/images/japs1_10.gif">
+                <img src="photo/New folder/images/japs1_11.gif">
+                <img src="photo/New folder/images/japs1_12.gif">
+                <img src="photo/New folder/images/japs1_13.gif">
+                <img src="photo/New folder/images/japs1_14.gif">
+                <img src="photo/New folder/images/japs1_15.gif">
+                <img src="photo/New folder/images/japs1_16.gif">
+                <img src="photo/New folder/images/japs1_17.gif">
+                <img src="photo/New folder/images/japs1_18.gif">
+                <img src="photo/New folder/images/japs1_19.gif">
+                <img src="photo/New folder/images/japs1_20.gif">
+                <img src="photo/New folder/images/japs1_21.gif">
+                <img src="photo/New folder/images/japs1_22.gif">
+                <img src="photo/New folder/images/japs1_23.gif">
+                <img src="photo/New folder/images/japs1_24.gif">
+            </div>
+        </div>
+        <!--about section-->
+        <div class="about" id="about">
+            <div class="aboutbg"></div>
+            <div class="aboutText">
+                <div class="text">
+                    <h2>Hi IM JOHNRIEL</h2>
+                    <h4>i'm a web desinger</h4>
+                    <p>I love coding and solving problems in the system. I've worked in game development as a backend and also a frontend designer. I learn fast specialy when i love what i'm doing. I'm a fresh graduate and i'm looking forward to use my skills
+                        in ceating projects for me to gain experience and to improve myself as a designer</p>
+                </div>
+                <div class="skillIcon">
+                    <img src="photo/cs.png">
+                    <img src="photo/css.png">
+                    <img src="photo/fb.png">
+                    <img src="photo/html.png">
+                    <img src="photo/js.png">
+                    <img src="photo/unitylogo.png">
+                </div>
+
+            </div>
+            <div class="aboutPicture">
+            </div>
+        </div>
+        <!--PROJECTS SECTION-->
+        <!--first project-->
+        <div class="projects" id="works">
+            <div class="projectTitle">
+                <h2>MOBILE GAME APP</h2>
+                <h4>Unity/C#</h4>
+            </div>
+            <div class="images">
+                <img src="photo/unityproj.png">
+                <img src="photo/town1.png">
+                <img src="photo/town2.png">
+                <img src="photo/town3.png">
+            </div>
+        </div>
+        <!--second project-->
+        <div class="projects">
+            <div class="images">
+                <img src="photo/proj1.png">
+                <img src="photo/proj2.png">
+                <img src="photo/proj3.png">
+                <img src="photo/proj4.png">
+            </div>
+            <div class="projectTitle">
+                <h2>ENROLLEMENT SYSTEM</h2>
+                <h4>HTML/Css/Js</h4>
+            </div>
         </div>
 
 
-        <!----about me-->
 
-        <div class="about" id="1">
-            <div class="box1">
-                <div class="nametext">
-                    <span id="work1">I am a</span>
-                </div>
-                <p>
-                    Fresh BSIT graduate from Bulacan State university, focusing on web desinging ,create and code web pages, using both technical and non-technical skills to produce websites that fit your customers' requirements.</p>
-            </div>
-            <div class="box2">
-                <img src="photo/japok.png"><br>
-                <div class="myName">
-                    <span id="name"> HI I'M</span><br>
-                    <span id="name"><b>JOHNRIEL TALADTAD</b></span>
-                </div>
-            </div>
+
+        <!--Background of the homepage-->
+        <div class="background">
+            <h1 class="bgtext">UI DESIGNER</h1>
         </div>
 
-        <!--projects-->
-        <div class="projects" id="2">
-            <div>
-
-            </div>
-            <div class="one">
-                <img src="photo/asd.jpg" width="400px" height="250px" id="mg">
-            </div>
-            <div class="two">
-                <img src="photo/proj2.png" width="400px" height="250px" id="mg1">
-            </div>
-            <div class="two">
-                <img src="photo/page1.png" width="400px" height="250px" id="mg2">
-            </div>
-        </div>
-
-        <!---skills -->
-        <div class="skills" id="3">
-            <span class="title"> Skills</span>
-            <div class="line"></div>
-            <div class="fisrtrow" id="firstrow">
-
-                <div class="html" onmouseover="htmlpic()" onmouseout="htmlpicout()" id="htmlbox">
-                    <img src="photo/html.png" width="80px" height="80px" id="pic1">
-                    <p class="des"> HTML</p>
-
-                    <!--progressbar-->
-                    <div class="difprog">
-                        <div class="proghtml1">
-                            90%
-                        </div>
-                    </div>
-                </div>
-                <div class="css" onmouseover="csspic()" onmouseout="csspicout()" id="cssbox">
-                    <img src="photo/css.png" width="80px" height="80px" id="csspic">
-                    <p class="des"> CSS</p>
-                    <!--progressbar-->
-                    <div class="difprog">
-                        <div class="proghtml2">
-                            90%
-                        </div>
-                    </div>
-                </div>
-
-                <div class="javascript" onmouseover="jspic()" onmouseout="jspicout()" id="jsbox">
-                    <img src="photo/js.png" width="80px" height="80px" id="jspic">
-                    <p class="des"> JS</p>
-                    <!--progressbar-->
-                    <div class="difprog">
-                        <div class="proghtml3">
-                            70%
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="secondrow" id="secondrow">
-                <div class="html" onmouseover="cspic()" onmouseout="cspicout()" id="csbox">
-                    <img src="photo/cs.png" width="80px" height="80px" id="cspic">
-                    <p class="des"> C#</p>
-                    <div class="difprog">
-                        <div class="proghtml4">
-                            90%
-                        </div>
-                    </div>
-                </div>
-                <div class="html" onmouseover="jqpic()" onmouseout="jqpicout()" id="jquerybox">
-                    <img src="photo/jq.png" width="80px" height="80px" id="jqpic">
-                    <p class="des"> Jquery</p>
-                    <div class="difprog">
-                        <div class="proghtml5">
-                            90%
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!---Srvices-->
-        <div class="services" id="4">
-            <div class="services-content">
-                <img src="photo/japok2.png" width="100%" height="110%" id="img">
-            </div>
-            <div class="services-content">
-                <div id="col1">
-                    <div class="title">UI/UX designer</div>
-                    <div class="line"></div>
-                    <div class="description">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officiis
-                        laborum earum? </span>
-                    </div>
-                </div>
-                <div id="col2">
-                    <div class="title">Programmer</div>
-                    <div class="line"></div>
-                    <div class="description">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officiis
-                        laborum earum? </span>
-                    </div>
-                </div>
-                <div id="col3">
-                    <div class="title">Web Designer </div>
-                    <div class="line"></div>
-                    <div class="description">
-                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tenetur excepturi laudantium inventore optio neque molestias quos officii
-                        laborum earum? </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="Contact-info">
-            <div class="number">
-                <img src="photo/phone.png" width="20px" height="20px" class="pics">
-                <span class="text">09466947653</span>
-            </div>
-            <div class="gmail">
-                <img src="photo/gmail.png" width="20px" height="20px" class="pics">
-                <span class="text">Taladtadjohnriel45@gmail.com</span>
-            </div>
-            <div class="gmail">
-                <img src="photo/fb.png" width="20px" height="20px" class="pics">
-                <a class="text" href="https://www.facebook.com/johnriel.abad/">John Riel A Taladad</a>
-            </div>
-        </div>
-    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 </body>
-<script src="js/js.js"></script>
+<script src="js/js.js "></script>
 
 </html>
