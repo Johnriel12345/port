@@ -114,6 +114,7 @@
     pointer-events: all;
   }
   .container .projects {
+    height: 160vh;
     overflow: hidden;
     width: 100%;
     padding: 0px 5%;
@@ -141,7 +142,7 @@
     order: 1;
   }
   .container .projects .images {
-    height: 200vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
