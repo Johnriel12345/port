@@ -95,8 +95,9 @@ const title = document.querySelectorAll(".projectTitle");
 gsap.from(title[0], {
     scrollTrigger: {
         trigger: project[0],
-        start: "top 30%",
-        end: "bottom 80%",
+        start: "top top",
+        end: "bottom bottom",
+
         toggleActions: "restart reverse play reverse"
     },
     x: -1000,
@@ -114,15 +115,15 @@ gsap.to(project[0], {
     //second project animation
     //firs project animation
 gsap.from(title[1], {
-    scrollTrigger: {
-        trigger: project[1],
-        start: "top 30%",
-        end: "bottom 80%",
-        toggleActions: "restart reverse play reverse"
-    },
-    x: 1000,
-})
-
+        scrollTrigger: {
+            trigger: project[1],
+            start: "top top",
+            end: "bottom bottom",
+            toggleActions: "restart reverse play reverse"
+        },
+        x: 1000,
+    })
+    //second project animation
 gsap.to(project[1], {
 
     scrollTrigger: {
@@ -132,3 +133,23 @@ gsap.to(project[1], {
         pin: title[1]
     },
 })
+
+//scrol to top
+const homebutton = document.querySelector(".fa-home");
+
+window.onscroll = function() { scrollFunction() };
+
+//show and hide the button
+function scrollFunction() {
+    if (document.querySelector(".container").scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        homebutton.style.display = "block";
+    } else {
+        homebutton.style.display = "none";
+
+    }
+}
+// go back to the top when button is clicked
+function toTop() {
+    document.querySelector(".container").scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
