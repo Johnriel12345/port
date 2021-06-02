@@ -210,4 +210,14 @@
     width: 100%;
     height: auto;
   }
+  .container .footer {
+    padding: 5% 5%;
+    flex-direction: column;
+  }
+  .container .footer form {
+    width: 100%;
+  }
+  .container .footer .links {
+    width: 100%;
+  }
 }
