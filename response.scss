@@ -1,5 +1,6 @@
-                                @media (max-width:400px) {
+                                @media (max-width:375px) {
                                     .background {
+                                        height: 60vh;
                                         h1 {
                                             font-size: 80px;
                                         }
@@ -116,7 +117,7 @@
                                             }
                                         }
                                         .projects {
-                                            height: 160vh;
+                                            height: 120vh;
                                             overflow: hidden;
                                             width: 100%;
                                             padding: 0px 5%;
@@ -213,13 +214,25 @@
                                             }
                                         }
                                         .footer {
+                                            margin-top: 0px;
+                                            height: 70vh;
                                             padding: 5% 5%;
                                             flex-direction: column;
+                                            justify-content: flex-start;
+                                            align-items: flex-start;
+                                            h1 {
+                                                font-size: 20px;
+                                            }
                                             form {
                                                 width: 100%;
                                             }
                                             .links {
                                                 width: 100%;
+                                                line-height: 20px;
+                                                height: 30%;
+                                            }
+                                            form {
+                                                height: 40%;
                                             }
                                         }
                                     }

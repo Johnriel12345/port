@@ -95,7 +95,7 @@ const title = document.querySelectorAll(".projectTitle");
 gsap.from(title[0], {
     scrollTrigger: {
         trigger: project[0],
-        start: "top top",
+        start: "top center",
         end: "bottom bottom",
 
         toggleActions: "restart reverse play reverse"
@@ -117,15 +117,15 @@ gsap.to(project[0], {
 gsap.from(title[1], {
         scrollTrigger: {
             trigger: project[1],
-            start: "top top",
+            start: "top center",
             end: "bottom bottom",
             toggleActions: "restart reverse play reverse"
+
         },
         x: 1000,
     })
     //second project animation
 gsap.to(project[1], {
-
     scrollTrigger: {
         trigger: project[1],
         start: "top top",

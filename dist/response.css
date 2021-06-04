@@ -1,4 +1,7 @@
 @media (max-width: 375px) {
+  .background {
+    height: 60vh;
+  }
   .background h1 {
     font-size: 80px;
   }
@@ -114,7 +117,7 @@
     pointer-events: all;
   }
   .container .projects {
-    height: 160vh;
+    height: 120vh;
     overflow: hidden;
     width: 100%;
     padding: 0px 5%;
@@ -211,13 +214,25 @@
     height: auto;
   }
   .container .footer {
+    margin-top: 0px;
+    height: 70vh;
     padding: 5% 5%;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .container .footer h1 {
+    font-size: 20px;
   }
   .container .footer form {
     width: 100%;
   }
   .container .footer .links {
     width: 100%;
+    line-height: 20px;
+    height: 30%;
+  }
+  .container .footer form {
+    height: 40%;
   }
 }
