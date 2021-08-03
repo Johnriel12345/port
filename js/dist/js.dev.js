@@ -124,46 +124,6 @@ window.addEventListener("scroll", function () {
   }
 
   console.log(scrolling);
-});
-var project = document.querySelectorAll(".projects");
-var title = document.querySelectorAll(".projectTitle"); //firs project animation
-
-gsap.from(title[0], {
-  scrollTrigger: {
-    trigger: project[0],
-    start: "top center",
-    end: "bottom bottom",
-    toggleActions: "restart reverse play reverse"
-  },
-  x: -1000
-});
-gsap.to(project[0], {
-  scrollTrigger: {
-    trigger: project[0],
-    start: "top top",
-    end: "bottom bottom",
-    pin: title[0]
-  }
-}); //second project animation
-//firs project animation
-
-gsap.from(title[1], {
-  scrollTrigger: {
-    trigger: project[1],
-    start: "top center",
-    end: "bottom bottom",
-    toggleActions: "restart reverse play reverse"
-  },
-  x: 1000
-}); //second project animation
-
-gsap.to(project[1], {
-  scrollTrigger: {
-    trigger: project[1],
-    start: "top top",
-    end: "bottom bottom",
-    pin: title[1]
-  }
 }); //scrol to top
 
 var homebutton = document.querySelector(".fa-home");
@@ -185,4 +145,19 @@ function scrollFunction() {
 function toTop() {
   document.querySelector(".container").scrollTop = 0;
   document.documentElement.scrollTop = 0;
+} //animation in project section
+
+
+function textIn(x) {
+  x.querySelector("div").style.opacity = "1";
+  x.querySelector("div").style.marginTop = "0px";
+  x.querySelector("img").style.opacity = "0.4";
+  x.querySelector("img").style.boxShadow = "none";
+}
+
+function textOut(x) {
+  x.querySelector("div").style.opacity = "0";
+  x.querySelector("div").style.marginTop = "-100px";
+  x.querySelector("img").style.boxShadow = " 2px 2px 5px black";
+  x.querySelector("img").style.opacity = "1";
 }
